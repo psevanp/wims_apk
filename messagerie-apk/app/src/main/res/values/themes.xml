@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Messagerie" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1a73e8</item>
+        <item name="colorPrimaryDark">#1251a3</item>
+        <item name="colorAccent">#1a73e8</item>
+        <item name="android:statusBarColor">#1251a3</item>
+        <item name="android:windowBackground">#f6f7fb</item>
+    </style>
+</resources>

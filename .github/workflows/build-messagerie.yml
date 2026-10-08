@@ -1,11 +1,11 @@
-name: Construire l'APK
+name: Construire l'APK Messagerie
 
 on:
   push:
     branches: [main]
     paths:
-      - "wims-apk/**"
-      - ".github/workflows/build-apk.yml"
+      - "messagerie-apk/**"
+      - ".github/workflows/build-messagerie.yml"
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: wims-apk
+        working-directory: messagerie-apk
     steps:
       - uses: actions/checkout@v4
 
@@ -28,18 +28,18 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.9"
-          build-root-directory: wims-apk
+          build-root-directory: messagerie-apk
 
       - name: Compiler l'APK
         run: gradle assembleDebug --no-daemon
 
       - name: Renommer l'APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk wims-rosaparks.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk messagerie-education.apk
 
       - name: Publier l'APK dans les Releases
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.${{ github.run_number }}
-          name: WIMS Rosa Parks v1.${{ github.run_number }}
-          files: wims-apk/wims-rosaparks.apk
-          make_latest: true
+          tag_name: messagerie-latest
+          name: Messagerie Éducation (dernière version)
+          files: messagerie-apk/messagerie-education.apk
+          make_latest: false

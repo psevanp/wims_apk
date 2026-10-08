@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Wims" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#e11d48</item>
+        <item name="colorPrimaryDark">#9f1239</item>
+        <item name="colorAccent">#e11d48</item>
+        <item name="android:statusBarColor">#9f1239</item>
+        <item name="android:windowBackground">#f6f7fb</item>
+    </style>
+</resources>

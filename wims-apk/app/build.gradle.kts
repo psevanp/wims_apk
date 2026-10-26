@@ -11,8 +11,20 @@ android {
         applicationId = "fr.rosaparks.wims"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
+    }
+
+    // Clé de signature fixe : sans elle, chaque compilation GitHub produit une signature
+    // différente et Android refuse de mettre à jour l'application déjà installée.
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("wims-debug.p12")
+            storePassword = "wimsrp2026"
+            keyAlias = "wims"
+            keyPassword = "wimsrp2026"
+            storeType = "pkcs12"
+        }
     }
 
     buildTypes {

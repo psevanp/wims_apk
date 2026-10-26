@@ -5,6 +5,8 @@ Application Android (WebView) qui ouvre la classe WIMS de l'élève et se connec
 - Premier lancement : l'élève choisit son professeur (M. POLTEAU ou M. KHOUANI), saisit son identifiant et son mot de passe.
 - Les lancements suivants : un clic sur l'icône ouvre directement la page d'accueil du compte de l'élève.
 - Identifiant et mot de passe sont stockés chiffrés (EncryptedSharedPreferences, clé dans le Keystore Android) et ne sont envoyés qu'à `wims.univ-amu.fr`.
+- Plusieurs comptes : chaque compte enregistré apparaît en un clic sur l'écran « Qui se connecte ? » (affiché au lancement
+  dès qu'il y a au moins deux comptes). « ➕ Ajouter un compte » en crée un autre ; appui long sur un compte pour le supprimer.
 - Bouton ⚙ en bas à gauche : revenir à l'accueil ou changer de compte.
 
 ## Obtenir l'APK (GitHub)
